@@ -1,0 +1,92 @@
+
+
+
+<ng-container >
+
+    <div class="card container" >
+
+        <br>
+        <h5>Bilateral:</h5>
+        <br>
+        
+
+        <div>
+
+          
+            <button  class="btn btn-success"><strong>Arthopods</strong> <i class=" fas fa-solid fa-angle-right"></i>  </button> 
+            <table style="margin-top: 10px;" class="table table-responsive table-bordered tabled">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>ID</th>
+                        <th>Familia</th>
+                    
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr  *ngFor="let item of bilateral">
+                    
+                      <td class="tdspace">{{ item.Name }}</td>
+                      <td>{{ item.ID }}</td>
+                      <td class="tdspa">{{item.Parent}}</td>
+                    </tr>
+                
+                </tbody>
+            </table>
+        </div>
+        <div>
+        
+            
+            <button  class="btn btn-success"><strong>Vertebrates</strong> <i class=" fas fa-solid fa-angle-right"></i>  </button> 
+            <table style="margin-top: 10px;" class="table table-responsive table-bordered tabled">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>ID</th>
+                        <th>Familia</th>
+                    
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr  *ngFor="let item of bilatera2">
+                    
+                      <td class="tdspace">{{ item.Name }}</td>
+                      <td>{{ item.ID }}</td>
+                      <td class="tdspa">{{item.Parent}}</td>
+                    </tr>
+                
+                </tbody>
+            </table>
+        </div>
+        
+        <div>
+        
+            <strong>Mollusks</strong>
+            <table style="margin-top: 10px;" class="table table-responsive table-bordered tabled">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>ID</th>
+                        <th>Familia</th>
+                    
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr  *ngFor="let item of bilatera3">
+                    
+                      <td class="tdspace">{{ item.Name }}</td>
+                      <td>{{ item.ID }}</td>
+                      <td class="tdspa">{{item.Parent}}</td>
+                    </tr>
+                
+                </tbody>
+            </table>
+        </div>
+        
+        
+    </div>
+</ng-container>
+
+
+
+

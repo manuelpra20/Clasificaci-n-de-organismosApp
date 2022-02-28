@@ -1,0 +1,124 @@
+
+
+
+<div class="container" style="margin-top: 20px;">
+    <div class="row">
+                   
+
+        <div class="col-md-3 col-sm-6 col-xs-12">
+    
+            <div class="single-feature text-center">
+
+                <ng-container >
+                    <div class="card container" >
+            
+                        <br>
+                        <h5>Clasificación de Organismos:</h5>
+                        <br>
+                        <div>
+                            
+                <div class="">
+                    <button  (click)=" mostrar = !mostrar " class="btn btn-success">Archaea <i class=" fas fa-solid fa-angle-right"></i>  </button> 
+                    
+                    <table style="margin-top: 10px;" class="table table-responsive table-bordered tabled">
+                        <thead>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>ID</th>
+                                <th>Familia</th>
+                            
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr  *ngFor="let item of archaea">
+                            
+                              <td class="tdspace">{{ item.Name }}</td>
+                              <td>{{ item.ID }}</td>
+                              <td class="tdspa">{{item.Parent}}</td>
+                            </tr>
+                        
+                        </tbody>
+                    </table>
+            </div>
+
+
+            <div>
+                    <button  (click)=" mostrar1 = !mostrar1 " class="btn btn-success">Eukaryota <i class=" fas fa-solid fa-angle-right"></i></button> 
+                    <table style=" margin-top: 10px;" class="table table-responsive table-bordered tabled">
+                        <thead>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>ID</th>
+                                <th>Familia</th>
+                            
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr  *ngFor="let item of eukaryota">
+                            
+                                <td class="tdspace">{{ item.Name }}</td>
+                                <td>{{ item.ID }}</td>
+                                 <td class="tdspa">{{item.Parent}}</td>
+                            </tr>
+                        
+                        </tbody>
+                    </table>
+            </div>
+
+            <div>
+                        <button  (click)=" mostrar2 = !mostrar2 " class="btn btn-success">Bacteria <i class=" fas fa-solid fa-angle-right"></i></button> 
+                        <table style=" margin-top: 10px;" class="table table-responsive table-bordered tabled">
+                            <thead>
+                                <tr>
+                                    <th>Nombre</th>
+                                    <th>ID</th>
+                                    <th>Familia</th>
+                                
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let item of bacteria">
+                                
+                                    <td class="tdspace">{{ item.Name }}</td>
+                                    <td>{{ item.ID }}</td>
+                                     <td class="tdspa">{{item.Parent}}</td>
+
+                                </tr>
+                            
+                            </tbody>
+                        </table>
+            </div>
+                        </div>
+
+                    </div>
+                </ng-container>
+    
+            </div>
+        </div>
+    
+        <div class="col-md-9 col-sm-6 col-xs-12">
+            <div class="single-feature text-center">
+                <app-archaea  *ngIf="mostrar"></app-archaea>
+            </div>
+            <br>
+            <div class="single-feature text-center">
+                <app-eukaryota  *ngIf="mostrar1"></app-eukaryota>
+            </div>
+            <br>
+            <div class="single-feature text-center">
+                <app-bacteria *ngIf="mostrar2" ></app-bacteria>
+            </div>
+        </div>
+    
+       
+        
+    
+    
+    
+    
+    </div>
+</div>
+
+
+
+

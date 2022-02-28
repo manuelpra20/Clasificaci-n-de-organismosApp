@@ -1,0 +1,144 @@
+
+
+
+<div class="row">
+                   
+
+    <div class="col-md-4 col-sm-6 col-xs-12">
+
+        <div class="single-feature text-center">
+
+            <ng-container >
+
+                <div class="card container" >
+            
+                    <br>
+                    <h5>Eukaryota:</h5>
+                    <br>
+                    <div>
+            
+                        <button (click)="mostrar = !mostrar"  class="btn btn-success">Plants <i class=" fas fa-solid fa-angle-right"></i>  </button> 
+                        <table style="margin-top: 10px;" class="table table-responsive table-bordered tabled">
+                            <thead>
+                                <tr>
+                                    <th>Nombre</th>
+                                    <th>ID</th>
+                                    <th>Familia</th>
+                                
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr  *ngFor="let item of eukaryota1">
+                                
+                                  <td class="tdspace">{{ item.Name }}</td>
+                                  <td>{{ item.ID }}</td>
+                                  <td class="tdspa">{{item.Parent}}</td>
+                                </tr>
+                            
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    
+                        <button (click)="mostrar1 = !mostrar1"   class="btn btn-success">Animals <i class=" fas fa-solid fa-angle-right"></i>  </button> 
+                        <table style="margin-top: 10px;" class="table table-responsive table-bordered tabled">
+                            <thead>
+                                <tr>
+                                    <th>Nombre</th>
+                                    <th>ID</th>
+                                    <th>Familia</th>
+                                
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr  *ngFor="let item of eukaryota2">
+                                
+                                  <td class="tdspace">{{ item.Name }}</td>
+                                  <td>{{ item.ID }}</td>
+                                  <td class="tdspa">{{item.Parent}}</td>
+                                </tr>
+                            
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div>
+                    
+                        <button  (click)="mostrar2 = !mostrar2"    class="btn btn-success">Fungi <i class=" fas fa-solid fa-angle-right"></i>  </button> 
+                        <table style="margin-top: 10px;" class="table table-responsive table-bordered tabled">
+                            <thead>
+                                <tr>
+                                    <th>Nombre</th>
+                                    <th>ID</th>
+                                    <th>Familia</th>
+                                
+                                </tr>
+                            </thead> 
+                            <tbody>
+                                <tr  *ngFor="let item of eukaryota3">
+                                
+                                  <td class="tdspace">{{ item.Name }}</td>
+                                  <td>{{ item.ID }}</td>
+                                  <td class="tdspa">{{item.Parent}}</td>
+                                </tr>
+                            
+                            </tbody>
+                        </table>
+                    </div>
+            
+                    <div>
+                    
+                        
+                  
+                        <strong>Protista</strong>
+                        <table style="margin-top: 10px;" class="table table-responsive table-bordered tabled">
+                            <thead>
+                                <tr>
+                                    <th>Nombre</th>
+                                    <th>ID</th>
+                                    <th>Familia</th>
+                                
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr  *ngFor="let item of eukaryota4">
+                                
+                                  <td class="tdspace">{{ item.Name }}</td>
+                                  <td>{{ item.ID }}</td>
+                                  <td class="tdspa">{{item.Parent}}</td>
+                                </tr>
+                            
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                </div>
+            </ng-container>
+            
+            
+
+        </div>
+    </div>
+
+    <div class="col-md-8 col-sm-6 col-xs-12">
+    
+        <div class="single-feature text-center">
+            <app-plants *ngIf="mostrar"></app-plants>
+        </div>
+
+        <br>
+
+        <div class="single-feature text-center">
+            <app-animals  *ngIf="mostrar1"></app-animals>
+        </div>
+        <br>
+
+        <div class="single-feature text-center">
+            <app-fungi  *ngIf="mostrar2"></app-fungi>
+        </div>
+        <br>
+        
+      
+    </div>
+
+</div>
