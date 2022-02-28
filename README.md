@@ -1,5 +1,10 @@
 # DefontanaApp
 
+Buenas saludos coordiales. 
+Para ejecutar la aplicacion tendras que clonar el proyecto
+luego en la interfaz de línea de comandos descargar los paquetes de node con: npm i
+luego en la interfaz de línea de comandos ejecutar ng serve -o para compilar u abrir el proyecto.
+finalmente poder visualizarlo.
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.3.
 
 ## Development server
